@@ -84,7 +84,7 @@ const apiTeste = [
 
 /*
 thumbmail: {
-  path: "c:/Users/Otavio/Documents/Outros_Cursos/Vagas/VagaNuveto/marvel_app/src/services/api_teste/images/x-men",
+  patah: "c:/Users/Otavio/Documents/Outros_Cursos/Vagas/VagaNuveto/marvel_app/src/services/api_teste/images/x-men",
   extension: "jpg"
 }
 */

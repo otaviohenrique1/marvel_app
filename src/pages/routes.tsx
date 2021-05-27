@@ -7,6 +7,7 @@ import UsuarioDados from "./Usuarios/UsuarioDados";
 import QuadrinhosDados from "./Quadrinhos/QuadrinhosDados";
 import Login from "./Login";
 import UsuarioCadastro from "./Usuarios/UsuarioCadastro";
+import Favoritos from "./Usuarios/Favoritos";
 
 export default function Routes() {
   return (
@@ -21,7 +22,7 @@ export default function Routes() {
           <Route component={QuadrinhosLista} path="/quadrinhos" exact />
           <Route component={QuadrinhosDados} path="/quadrinhos/:id" />
           <Route component={UsuarioDados} path="/usuarios/:id" exact/>
-          <Route component={UsuarioDados} path="/favoritos/:id" exact/>
+          <Route component={Favoritos} path="/favoritos/:id" exact/>
         </Switch>
       </BrowserRouter>
     </>

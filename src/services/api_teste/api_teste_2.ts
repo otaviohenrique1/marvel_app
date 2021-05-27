@@ -1,15 +1,15 @@
-import avengers from "../../services/api_teste/images/personagens/avengers_vol_1_1.jpg";
-import blackWidow from "../../services/api_teste/images/personagens/tales_of_suspense_vol_1_52.jpg";
-import captainAmerica from "../../services/api_teste/images/personagens/captain_america_comics_vol_1_1.jpg";
-import guardiansOfTheGalaxy from "../../services/api_teste/images/personagens/guardians_of_the_galaxy_vol_2_1.jpg";
-import ironMan from "../../services/api_teste/images/personagens/tales_of_suspense_vol_1_39.jpg";
-import spiderMan from "../../services/api_teste/images/personagens/amazing_fantasy_vol_1_15.jpg";
-import wolverine from "../../services/api_teste/images/personagens/incredible_hulk_vol_1_181.jpg";
-import xMen from "../../services/api_teste/images/personagens/x-men_vol_1_1.jpg";
+import avengers from "../../services/api_teste/images/quadrinhos/avengers_vol_1_1.jpg";
+import blackWidow from "../../services/api_teste/images/quadrinhos/tales_of_suspense_vol_1_52.jpg";
+import captainAmerica from "../../services/api_teste/images/quadrinhos/captain_america_comics_vol_1_1.jpg";
+import guardiansOfTheGalaxy from "../../services/api_teste/images/quadrinhos/guardians_of_the_galaxy_vol_2_1.jpg";
+import ironMan from "../../services/api_teste/images/quadrinhos/tales_of_suspense_vol_1_39.jpg";
+import spiderMan from "../../services/api_teste/images/quadrinhos/amazing_fantasy_vol_1_15.jpg";
+import wolverine from "../../services/api_teste/images/quadrinhos/incredible_hulk_vol_1_181.jpg";
+import xMen from "../../services/api_teste/images/quadrinhos/x-men_vol_1_1.jpg";
 
 const api_teste_2 = [
   {
-    id: '874512dplu',
+    id: '856qas4dgp',
     title: 'Tales of Suspense Vol 1 39',
     description: 'Primeira aparição do Homem de Ferro',
     thumbmail: {

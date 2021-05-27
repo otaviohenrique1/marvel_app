@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import { Col, Row, Table, Button } from 'reactstrap';
+import { Col, Row, Table } from 'reactstrap';
 // import api from '../../services/api';
 import "../../../styles/scss/personagem/style.scss";
 import ResponseData from './ResponseData';
+import { Item } from '../../../components/Item';
 
 import apiTeste from "../../../services/api_teste/api_teste";
-import { Link } from 'react-router-dom';
 
 export default function PersonagensLista() {
   const [dataMarvel, setDataMarvel] = useState<ResponseData[]>([]);
@@ -28,6 +28,9 @@ export default function PersonagensLista() {
 
   return (
     <Row>
+      <Col md={12} className="mt-5 mb-5">
+        <h1>Personagens</h1>
+      </Col>
       <Col md={12}>
         <Table striped>
           <thead>
@@ -41,21 +44,12 @@ export default function PersonagensLista() {
           <tbody>
             {dataMarvel.map((character: ResponseData) => {
               return (
-                <tr key={character.id}>
-                  <td>
-                    <img
-                      src={`${character.thumbmail.path}`} alt={character.name}
-                      // className="imagem-personagem"
-                      width={50}
-                    />
-                  </td>
-                  <td>{character.name}</td>
-                  <td>
-                    <Link to={`/personagens/${character.id}`}>
-                      <Button color="primary">Exibir</Button>
-                    </Link>
-                  </td>
-                </tr>
+                <Item
+                  id={character.id}
+                  name={character.name}
+                  image={`${character.thumbmail.path}`}
+                  to={`/personagens/${character.id}`}
+                />
               );
             })}
           </tbody>
@@ -64,3 +58,20 @@ export default function PersonagensLista() {
     </Row>
   );
 }
+
+/*
+  <tr key={character.id}>
+    <td>
+      <img
+        src={`${character.thumbmail.path}`} alt={character.name}
+        width={50}
+      />
+    </td>
+    <td>{character.name}</td>
+    <td>
+      <Link to={`/personagens/${character.id}`}>
+        <Button color="primary">Exibir</Button>
+      </Link>
+    </td>
+  </tr>
+*/

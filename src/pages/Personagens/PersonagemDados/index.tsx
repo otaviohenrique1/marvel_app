@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { ListGroup, ListGroupItem, Row } from 'reactstrap';
+import { Button, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
 import apiTeste from '../../../services/api_teste/api_teste';
+import { BsHeartFill, BsHeart } from "react-icons/bs";
 
 interface DataMarvelProps {
   name: string;
@@ -16,15 +17,17 @@ interface PersonagemDadosParamsProps {
   id: string;
 }
 
+const dadosIniciais = {
+  name: '',
+  description: '',
+  thumbmail: {
+    extension: '',
+    path: ''
+  }
+};
 export default function PersonagemDados() {
-  const [dataMarvel, setDataMarvel] = useState<DataMarvelProps>({
-    name: '',
-    description: '',
-    thumbmail: {
-      extension: '',
-      path: ''
-    }
-  });
+  const [dataMarvel, setDataMarvel] = useState<DataMarvelProps>(dadosIniciais);
+  const [favoritar, setFavoritar] = useState<boolean>(false);
   
   const { id } = useParams<PersonagemDadosParamsProps>();
 
@@ -54,6 +57,22 @@ export default function PersonagemDados() {
           <img src={dataMarvel.thumbmail.path} alt={dataMarvel.name} width={200}  />
         </ListGroupItem>
         <ListGroupItem>{dataMarvel.description}</ListGroupItem>
+        <ListGroupItem>
+          <Form>
+            <Button
+              color="primary"
+              placeholder="Favoritar"
+              type="button"
+              onClick={() => setFavoritar(!favoritar)}
+            >
+              {(favoritar) ? (
+                <BsHeartFill size={40}/>
+              ) : (
+                <BsHeart size={40}/>
+              )}
+            </Button>
+          </Form>
+        </ListGroupItem>
       </ListGroup>
     </Row>
   );
