@@ -10,11 +10,23 @@ interface CampoProps {
   nameInput?: string;
   idInput?: string;
   valueInput?: any;
+  required?: boolean;
+  className?: string;
 }
 
-export default function Campo({ htmlFor, label, placeholderInput, typeInput, nameInput, idInput,  valueInput }: CampoProps) {
+export default function Campo({
+  htmlFor,
+  label,
+  placeholderInput,
+  typeInput,
+  nameInput,
+  idInput,
+  valueInput,
+  required,
+  className
+}: CampoProps) {
   return (
-    <FormGroup>
+    <FormGroup className={className}>
       <InputGroup>
         <InputGroupAddon addonType="prepend">
           <InputGroupText>
@@ -28,6 +40,7 @@ export default function Campo({ htmlFor, label, placeholderInput, typeInput, nam
           id={idInput}
           placeholder={placeholderInput}
           value={valueInput}
+          required={required}
         />
       </InputGroup>
     </FormGroup>

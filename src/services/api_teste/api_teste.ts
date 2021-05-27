@@ -1,12 +1,11 @@
-import avengers from "../../services/api_teste/images/avengers.jpg";
-import blackWidow from "../../services/api_teste/images/black_widow.jpg";
-import captainAmerica from "../../services/api_teste/images/captain_america.jpg";
-import guardiansOfTheGalaxy from "../../services/api_teste/images/guardians_of_the_galaxy.jpg";
-import ironMan from "../../services/api_teste/images/iron_man.jpg";
-import spiderMan from "../../services/api_teste/images/spider-man.jpg";
-import wolverine from "../../services/api_teste/images/wolverine.jpg";
-import xMen from "../../services/api_teste/images/x-men.jpg";
-
+import avengers from "../../services/api_teste/images/personagens/avengers.jpg";
+import blackWidow from "../../services/api_teste/images/personagens/black_widow.jpg";
+import captainAmerica from "../../services/api_teste/images/personagens/captain_america.jpg";
+import guardiansOfTheGalaxy from "../../services/api_teste/images/personagens/guardians_of_the_galaxy.jpg";
+import ironMan from "../../services/api_teste/images/personagens/iron_man.jpg";
+import spiderMan from "../../services/api_teste/images/personagens/spider-man.jpg";
+import wolverine from "../../services/api_teste/images/personagens/wolverine.jpg";
+import xMen from "../../services/api_teste/images/personagens/x-men.jpg";
 
 const apiTeste = [
   {

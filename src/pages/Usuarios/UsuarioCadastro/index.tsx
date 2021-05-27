@@ -1,8 +1,8 @@
 import { Container, Row, Col, Button, ButtonGroup, Form } from "reactstrap";
-import "./style.css"
 import Campo from "../../../components/Campo";
 import { Link } from "react-router-dom";
 // import api from "../../../services/api";
+import '../../../styles/scss/usuario/style.scss';
 
 // interface FormTypes {
 //   nome: string;
@@ -22,6 +22,7 @@ export default function CadastroUsuarios() {
       </Row>
       <Form>
         <Campo
+          className="mt-2"
           htmlFor="nome"
           label="Nome"
           typeInput="text"
@@ -30,6 +31,7 @@ export default function CadastroUsuarios() {
           placeholderInput="Digite o nome do usuario"
         />
         <Campo
+          className="mt-2"
           htmlFor="email"
           label="Email"
           typeInput="email"
@@ -38,6 +40,7 @@ export default function CadastroUsuarios() {
           placeholderInput="Digite a email do usuario"
         />
         <Campo
+          className="mt-2"
           htmlFor="senha"
           label="Senha"
           typeInput="password"
@@ -45,7 +48,7 @@ export default function CadastroUsuarios() {
           idInput="senha"
           placeholderInput="Digite a senha do usuario"
         />
-        <ButtonGroup>
+        <ButtonGroup className="mt-5">
           <Button color="primary" type="submit">Salvar</Button>
           <Button color="danger" type="reset">Limpar</Button>
           <Link to="/" className="btn-item-link">
