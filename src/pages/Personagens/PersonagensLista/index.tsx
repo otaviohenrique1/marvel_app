@@ -43,12 +43,15 @@ export default function PersonagensLista() {
               return (
                 <tr key={character.id}>
                   <td>
-                    <img src={`${character.thumbmail.path}`} alt={character.name} className="imagem-personagem"/>
+                    <img
+                      src={`${character.thumbmail.path}`} alt={character.name}
+                      // className="imagem-personagem"
+                      width={50}
+                    />
                   </td>
                   <td>{character.name}</td>
-                  <td>{character.description}</td>
                   <td>
-                    <Link to={`/personagens/${1}`}>
+                    <Link to={`/personagens/${character.id}`}>
                       <Button color="primary">Exibir</Button>
                     </Link>
                   </td>

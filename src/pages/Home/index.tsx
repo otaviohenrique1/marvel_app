@@ -12,6 +12,9 @@ export default function Home() {
       <Link to="/personagens">
         <Button>Personagens</Button>
       </Link>
+      <Link to="/favoritos">
+        <Button>Favoritos</Button>
+      </Link>
     </div>
   );
 }
