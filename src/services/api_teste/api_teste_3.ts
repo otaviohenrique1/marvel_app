@@ -19,7 +19,7 @@ const api_teste_3 = [
   {
     id: '77448855ss',
     user_id: '012daws8565',
-    foreign_key: '856qas4dgp',
+    item_id: '856qas4dgp',
     name: 'Tales of Suspense Vol 1 39',
     favorite: false,
     category: 'Comics',
@@ -31,7 +31,7 @@ const api_teste_3 = [
   {
     id: 'qweasd4585',
     user_id: '012daws8565',
-    foreign_key: '877894asqw',
+    item_id: '877894asqw',
     name: 'Tales of Suspense Vol 1 52',
     favorite: true,
     category: 'Comics',
@@ -43,7 +43,7 @@ const api_teste_3 = [
   {
     id: 'poldq41256',
     user_id: '012daws8565',
-    foreign_key: '874512dplu',
+    item_id: '874512dplu',
     name: 'Amazing Fantasy Vol 1 15',
     favorite: false,
     category: 'Comics',
@@ -55,7 +55,7 @@ const api_teste_3 = [
   {
     id: 'qwe14254po',
     user_id: '012daws8565',
-    foreign_key: 'uij874k96p',
+    item_id: 'uij874k96p',
     name: 'Incredible Hulk Vol 1 181',
     favorite: false,
     category: 'Comics',
@@ -68,7 +68,7 @@ const api_teste_3 = [
     id: 'wa2eaq1eqs',
     user_id: '012daws8565',
     name: 'Captain America Vol 1 1',
-    foreign_key: '985647pu45',
+    item_id: '985647pu45',
     favorite: true,
     category: 'Comics',
     thumbmail: {
@@ -79,7 +79,7 @@ const api_teste_3 = [
   {
     id: 'xcvbxcv1c1',
     user_id: '012daws8565',
-    foreign_key: '98562314pg',
+    item_id: '98562314pg',
     name: 'Avengers Vol 1 1',
     favorite: false,
     category: 'Comics',
@@ -91,7 +91,7 @@ const api_teste_3 = [
   {
     id: 'dfgd4455577',
     user_id: '012daws8565',
-    foreign_key: '852paqs759',
+    item_id: '852paqs759',
     name: 'Guardians of the Galaxy Vol 2 1',
     favorite: false,
     category: 'Comics',
@@ -103,7 +103,7 @@ const api_teste_3 = [
   {
     id: 'iopiopi74f',
     user_id: '012daws8565',
-    foreign_key: '9856as123p',
+    item_id: '9856as123p',
     name: 'X-Men Vol 1 1',
     favorite: false,
     category: 'Comics',
@@ -115,7 +115,7 @@ const api_teste_3 = [
   {
     id: "456478dfff",
     user_id: '012daws8565',
-    foreign_key: '123qw45qqe4',
+    item_id: '123qw45qqe4',
     name: "Homem de Ferro",
     favorite: true,
     category: 'Characters',
@@ -127,7 +127,7 @@ const api_teste_3 = [
   {
     id: "45445df545",
     user_id: '012daws8565',
-    foreign_key: '9558asd4d7',
+    item_id: '9558asd4d7',
     name: "Viúva Negra",
     favorite: true,
     category: 'Characters',
@@ -139,7 +139,7 @@ const api_teste_3 = [
   {
     id: "dfg456dgfdd",
     user_id: '012daws8565',
-    foreign_key: 'aa5a86ee77',
+    item_id: 'aa5a86ee77',
     name: "Homem-Aranha",
     favorite: false,
     category: 'Characters',
@@ -151,7 +151,7 @@ const api_teste_3 = [
   {
     id: "qweq14easd4",
     user_id: '012daws8565',
-    foreign_key: 'aa5aqwse88',
+    item_id: 'aa5aqwse88',
     name: "Wolverine",
     favorite: false,
     category: 'Characters',
@@ -163,7 +163,7 @@ const api_teste_3 = [
   {
     id: "524111d44f",
     user_id: '012daws8565',
-    foreign_key: 'z654as5dd9',
+    item_id: 'z654as5dd9',
     name: "Capitão América",
     favorite: false,
     category: 'Characters',
@@ -175,7 +175,7 @@ const api_teste_3 = [
   {
     id: "8fgdfgdfg1",
     user_id: '012daws8565',
-    foreign_key: 'asdq425rd4',
+    item_id: 'asdq425rd4',
     name: "Vingadores",
     favorite: true,
     category: 'Characters',
@@ -187,7 +187,7 @@ const api_teste_3 = [
   {
     id: "sdfsdf44524",
     user_id: '012daws8565',
-    foreign_key: 'aa8542d67g',
+    item_id: 'aa8542d67g',
     name: "Guardiões da Galáxia",
     favorite: false,
     category: 'Characters',
@@ -199,7 +199,7 @@ const api_teste_3 = [
   {
     id: "gh44gghhg00h",
     user_id: '012daws8565',
-    foreign_key: '9e6e3r5d63',
+    item_id: '9e6e3r5d63',
     name: "X-Men",
     favorite: true,
     category: 'Characters',
