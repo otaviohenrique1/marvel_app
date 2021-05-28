@@ -8,6 +8,7 @@ import QuadrinhosDados from "./Quadrinhos/QuadrinhosDados";
 import Login from "./Login";
 import UsuarioCadastro from "./Usuarios/UsuarioCadastro";
 import Favoritos from "./Usuarios/Favoritos";
+import PageContainer from '../components/PageContainer';
 
 export default function Routes() {
   return (
@@ -16,13 +17,15 @@ export default function Routes() {
         <Switch>
           <Route component={Login} path="/" exact/>
           <Route component={UsuarioCadastro} path="/usuarios/cadastro" />
-          <Route component={Home} path="/home" exact/>
-          <Route component={PersonagensLista} path="/personagens" exact />
-          <Route component={PersonagemDados} path="/personagens/:id" />
-          <Route component={QuadrinhosLista} path="/quadrinhos" exact />
-          <Route component={QuadrinhosDados} path="/quadrinhos/:id" />
-          <Route component={UsuarioDados} path="/usuarios/:id" exact/>
-          <Route component={Favoritos} path="/favoritos/:id" exact/>
+          <PageContainer>
+            <Route component={Home} path="/home" exact/>
+            <Route component={PersonagensLista} path="/personagens" exact />
+            <Route component={PersonagemDados} path="/personagens/:id" />
+            <Route component={QuadrinhosLista} path="/quadrinhos" exact />
+            <Route component={QuadrinhosDados} path="/quadrinhos/:id" />
+            <Route component={UsuarioDados} path="/usuarios/:id" exact/>
+            <Route component={Favoritos} path="/favoritos/:id" exact/>
+          </PageContainer>
         </Switch>
       </BrowserRouter>
     </>

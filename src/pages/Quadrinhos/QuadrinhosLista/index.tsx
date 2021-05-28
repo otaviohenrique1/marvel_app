@@ -27,16 +27,23 @@ export default function QuadrinhosLista() {
             </tr>
           </thead>
           <tbody>
-            {dataMarvel.map((comics: ResponseData) => {
-              return (
-                <Item
-                  id={comics.id}
-                  name={comics.title}
-                  image={`${comics.thumbmail.path}`}
-                  to={`/quadrinhos/${comics.id}`}
-                />
-              );
-            })}
+            {(dataMarvel.length !== 0) ? 
+                dataMarvel.map((comics: ResponseData) => {
+                  return (
+                    <Item
+                      id={comics.id}
+                      name={comics.title}
+                      image={`${comics.thumbmail.path}`}
+                      to={`/quadrinhos/${comics.id}`}
+                    />
+                  );
+                }
+              ) : (
+              <tr>
+                <td colSpan={4}>Lista vazia</td>
+              </tr>
+              )
+            }
           </tbody>
         </Table>
       </Col>

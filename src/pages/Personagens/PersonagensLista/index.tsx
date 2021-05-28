@@ -42,16 +42,22 @@ export default function PersonagensLista() {
             </tr>
           </thead>
           <tbody>
-            {dataMarvel.map((character: ResponseData) => {
-              return (
-                <Item
-                  id={character.id}
-                  name={character.name}
-                  image={`${character.thumbmail.path}`}
-                  to={`/personagens/${character.id}`}
-                />
-              );
-            })}
+            {(dataMarvel.length !== 0) ? 
+              dataMarvel.map((character: ResponseData) => {
+                return (
+                  <Item
+                    id={character.id}
+                    name={character.name}
+                    image={`${character.thumbmail.path}`}
+                    to={`/personagens/${character.id}`}
+                  />
+                );
+              }) : (
+                <tr>
+                  <td colSpan={4}>Lista vazia</td>
+                </tr>
+              )
+            }
           </tbody>
         </Table>
       </Col>

@@ -21,7 +21,7 @@ const api_teste_3 = [
     user_id: '012daws8565',
     foreign_key: '856qas4dgp',
     name: 'Tales of Suspense Vol 1 39',
-    favorite: true,
+    favorite: false,
     category: 'Comics',
     thumbmail: {
       path: ironManComic,
@@ -57,7 +57,7 @@ const api_teste_3 = [
     user_id: '012daws8565',
     foreign_key: 'uij874k96p',
     name: 'Incredible Hulk Vol 1 181',
-    favorite: true,
+    favorite: false,
     category: 'Comics',
     thumbmail: {
       path: wolverineComic,
@@ -67,8 +67,8 @@ const api_teste_3 = [
   {
     id: 'wa2eaq1eqs',
     user_id: '012daws8565',
-    name: 'Captain America 985647pu45 Vol 1 1',
-    foreign_key: '856qas4dgp',
+    name: 'Captain America Vol 1 1',
+    foreign_key: '985647pu45',
     favorite: true,
     category: 'Comics',
     thumbmail: {
@@ -141,7 +141,7 @@ const api_teste_3 = [
     user_id: '012daws8565',
     foreign_key: 'aa5a86ee77',
     name: "Homem-Aranha",
-    favorite: true,
+    favorite: false,
     category: 'Characters',
     thumbmail: {
       path: spiderManCharacter,
@@ -165,7 +165,7 @@ const api_teste_3 = [
     user_id: '012daws8565',
     foreign_key: 'z654as5dd9',
     name: "Capitão América",
-    favorite: true,
+    favorite: false,
     category: 'Characters',
     thumbmail: {
       path: captainAmericaCharacter,
@@ -209,6 +209,5 @@ const api_teste_3 = [
     }
   },
 ];
-
 
 export default api_teste_3;
