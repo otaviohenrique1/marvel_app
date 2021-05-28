@@ -43,12 +43,12 @@ export default function UsuarioDados() {
   return (
     <Row>
       <Col md={12} className="mt-4 mb-5">
-        <h1>UsuarioDados</h1>
+        <h1>Perfil</h1>
       </Col>
       <Col md={12}>
         <ListGroup>
           <ListGroupItem>
-            <span className='mr-2' style={{fontWeight: 'bold'}}> Nome: </span>{usuarioDados.name}
+            <span className='mr-2' style={{fontWeight: 'bold'}}>Nome: </span>{usuarioDados.name}
           </ListGroupItem>
           <ListGroupItem>
             <span className='mr-2' style={{fontWeight: 'bold'}}>Email: </span>{usuarioDados.email}

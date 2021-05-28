@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Button, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
+import { Button, Col, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
 import apiTeste from '../../../services/api_teste/api_teste';
 import { BsHeartFill, BsHeart } from "react-icons/bs";
 
@@ -51,29 +51,34 @@ export default function PersonagemDados() {
   
   return (
     <Row>
-      <ListGroup>
-        <ListGroupItem>{dataMarvel.name}</ListGroupItem>
-        <ListGroupItem>
-          <img src={dataMarvel.thumbmail.path} alt={dataMarvel.name} width={200}  />
-        </ListGroupItem>
-        <ListGroupItem>{dataMarvel.description}</ListGroupItem>
-        <ListGroupItem>
-          <Form>
-            <Button
-              color="primary"
-              placeholder="Favoritar"
-              type="button"
-              onClick={() => setFavoritar(!favoritar)}
-            >
-              {(favoritar) ? (
-                <BsHeartFill size={40}/>
-              ) : (
-                <BsHeart size={40}/>
-              )}
-            </Button>
-          </Form>
-        </ListGroupItem>
-      </ListGroup>
+      <Col md={12}>
+        <h1>Dados do Personagem</h1>
+      </Col>
+      <Col md={12}>
+        <ListGroup>
+          <ListGroupItem>{dataMarvel.name}</ListGroupItem>
+          <ListGroupItem>
+            <img src={dataMarvel.thumbmail.path} alt={dataMarvel.name} width={200}  />
+          </ListGroupItem>
+          <ListGroupItem>{dataMarvel.description}</ListGroupItem>
+          <ListGroupItem>
+            <Form>
+              <Button
+                color="primary"
+                placeholder="Favoritar"
+                type="button"
+                onClick={() => setFavoritar(!favoritar)}
+              >
+                {(favoritar) ? (
+                  <BsHeartFill size={40}/>
+                ) : (
+                  <BsHeart size={40}/>
+                )}
+              </Button>
+            </Form>
+          </ListGroupItem>
+        </ListGroup>
+      </Col>
     </Row>
   );
 }
