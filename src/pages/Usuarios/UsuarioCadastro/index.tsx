@@ -20,7 +20,7 @@ export default function CadastroUsuarios() {
           <h1>Cadastro de Usuários</h1>
         </Col>
       </Row>
-      <Form>
+      <Form onSubmit={(e) => e.preventDefault()}>
         <Campo
           className="mt-2"
           htmlFor="nome"
@@ -29,6 +29,7 @@ export default function CadastroUsuarios() {
           nameInput="nome"
           idInput="nome"
           placeholderInput="Digite o nome do usuario"
+          required
         />
         <Campo
           className="mt-2"
@@ -38,6 +39,7 @@ export default function CadastroUsuarios() {
           nameInput="email"
           idInput="email"
           placeholderInput="Digite a email do usuario"
+          required
         />
         <Campo
           className="mt-2"
@@ -47,6 +49,7 @@ export default function CadastroUsuarios() {
           nameInput="senha"
           idInput="senha"
           placeholderInput="Digite a senha do usuario"
+          required
         />
         <ButtonGroup className="mt-5">
           <Button color="primary" type="submit">Salvar</Button>

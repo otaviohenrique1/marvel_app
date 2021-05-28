@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Collapse, Nav, NavbarBrand, NavbarToggler, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavItem } from "reactstrap";
 import { BsChatSquareDots, BsPersonFill } from "react-icons/bs";
 import '../../styles/scss/header/style.scss'
+import apiTeste4 from '../../services/api_teste/api_teste_4';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,10 +35,10 @@ export default function Header() {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  <Link className="nav-item-link" to={`/usuario/${'1'}`}>Cadastro</Link>
+                  <Link className="nav-item-link" to={`/usuario/${apiTeste4[0].id}`}>Perfil</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link className="nav-item-link" to={`/favoritos/${'1'}`}>Favoritos</Link>
+                  <Link className="nav-item-link" to={`/favoritos/${apiTeste4[0].id}`}>Favoritos</Link>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>

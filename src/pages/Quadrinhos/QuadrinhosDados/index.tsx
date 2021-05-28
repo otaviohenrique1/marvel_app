@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BsHeartFill, BsHeart } from 'react-icons/bs';
 import { useParams } from 'react-router';
 import { Button, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
-import apiTeste from '../../../services/api_teste/api_teste_2';
+import apiTeste2 from '../../../services/api_teste/api_teste_2';
 
 interface DataMarvelProps {
   title: string;
@@ -32,7 +32,7 @@ export default function QuadrinhosDados() {
   const { id } = useParams<QuadrinhosDadosParamsProps>();
 
   useEffect(() => {
-    let resultado = apiTeste.find((item) => {
+    let resultado = apiTeste2.find((item) => {
       if (item.id === id) {
         setDataMarvel({
           title: item.title,

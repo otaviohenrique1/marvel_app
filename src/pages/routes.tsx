@@ -23,7 +23,7 @@ export default function Routes() {
             <Route component={PersonagemDados} path="/personagens/:id" />
             <Route component={QuadrinhosLista} path="/quadrinhos" exact />
             <Route component={QuadrinhosDados} path="/quadrinhos/:id" />
-            <Route component={UsuarioDados} path="/usuarios/:id" exact/>
+            <Route component={UsuarioDados} path="/usuario/:id" exact/>
             <Route component={Favoritos} path="/favoritos/:id" exact/>
           </PageContainer>
         </Switch>
