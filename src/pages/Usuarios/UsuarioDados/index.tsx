@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Row, ListGroup, ListGroupItem, Col } from 'reactstrap';
 import apiTeste4 from '../../../services/api_teste/api_teste_4';
+// import apiServer from "../../../services/api_server";
 
 interface UsuarioDadosProps {
   id: string;

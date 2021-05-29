@@ -5,7 +5,7 @@ import api_teste_3 from '../../../services/api_teste/api_teste_3';
 interface ResponseData {
   id: string;
   user_id: string;
-  foreign_key: string;
+  item_id: string;
   name: string;
   favorite: boolean;
   category: string;
