@@ -36,7 +36,7 @@ export default function Login() {
   const history = useHistory();
 
   async function handleSubmitForm(values: FormTypes) {
-    apiServer.get('usuarios', {
+    apiServer.post('usuarios/login', {
       auth: {
         username: (values.email).toString(),
         password: (md5(values.senha)).toString()
@@ -44,12 +44,18 @@ export default function Login() {
     })
     .then((e) => {
       console.log(e);
+      console.log(values.email);
+      console.log(values.senha);
+      console.log(md5(values.senha));
       history.push('/home');
     })
     .catch((error) => {
       alert('Usuario ou senha invalidos');
       console.log(error);
-      return;
+      console.log(values.email);
+      console.log(values.senha);
+      console.log(md5(values.senha));
+      // return;
     });
   }
 

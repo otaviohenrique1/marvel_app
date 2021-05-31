@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Row, ListGroup, ListGroupItem, Col } from 'reactstrap';
 import apiTeste4 from '../../../services/api_teste/api_teste_4';
-// import apiServer from "../../../services/api_server";
+import apiServer from "../../../services/api_server";
 
 interface UsuarioDadosProps {
   id: string;
@@ -26,6 +26,19 @@ export default function UsuarioDados() {
   const [usuarioDados, setUsuarioDados] = useState<UsuarioDadosProps>(dadosIniciais);
 
   const { id } = useParams<QuadrinhosDadosParamsProps>();
+
+  useEffect(() => {
+    apiServer.get(`usuarios/${id}`)
+    .then((response) => {
+      setUsuarioDados({
+        id: response.data.id,
+        name: response.data.name,
+        email: response.data.email,
+        senha: response.data.senha,
+      });
+    })
+    .catch((error) => console.log(`Erro => ${error}`));
+  }, [id]);
 
   useEffect(() => {
     apiTeste4.find((item) => {

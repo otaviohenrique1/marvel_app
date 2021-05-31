@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Button, Col, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
 import apiTeste from '../../../services/api_teste/api_teste';
+import apiTeste4 from '../../../services/api_teste/api_teste_4';
+import apiServer from '../../../services/api_server';
 import { BsHeartFill, BsHeart } from "react-icons/bs";
+// import ResponseData from '../../Usuarios/UsuarioDados/ResponseData';
 
 interface DataMarvelProps {
   name: string;
@@ -28,6 +31,7 @@ const dadosIniciais = {
 export default function PersonagemDados() {
   const [dataMarvel, setDataMarvel] = useState<DataMarvelProps>(dadosIniciais);
   const [favoritar, setFavoritar] = useState<boolean>(false);
+  // const [userData, setUserData] = useState<ResponseData[]>([]);
   
   const { id } = useParams<PersonagemDadosParamsProps>();
 
@@ -46,9 +50,23 @@ export default function PersonagemDados() {
       return '';
     });
     console.log(resultado);
-    
   }, [id]);
   
+  // useEffect(() => {}, []);
+
+  async function handleSubmit() {
+    setFavoritar(!favoritar);
+    apiServer.post('favoritos', {
+      "user_id": parseInt(apiTeste4[0].id),
+    	"item_id": parseInt(id),
+	    "name": (dataMarvel.name).toString(),
+	    "favorite": favoritar,
+	    "category": "Comics"
+    })
+    .then(() => console.log(`Marcado => ${favoritar}`))
+    .catch(() => console.log(`Erro => ${favoritar}`));
+  }
+
   return (
     <Row>
       <Col md={12}>
@@ -67,12 +85,12 @@ export default function PersonagemDados() {
                 color="primary"
                 placeholder="Favoritar"
                 type="button"
-                onClick={() => setFavoritar(!favoritar)}
+                onClick={handleSubmit}
               >
                 {(favoritar) ? (
-                  <BsHeartFill size={40}/>
-                ) : (
                   <BsHeart size={40}/>
+                  ) : (
+                  <BsHeartFill size={40}/>
                 )}
               </Button>
             </Form>

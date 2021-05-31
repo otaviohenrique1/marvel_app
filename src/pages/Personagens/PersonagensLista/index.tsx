@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { Col, Row, Table } from 'reactstrap';
-// import api from '../../services/api';
+// import api_marvel from '../../../services/api_marvel';
 import "../../../styles/scss/personagem/style.scss";
 import ResponseData from './ResponseData';
 import { Item } from '../../../components/Item';
@@ -12,11 +12,13 @@ export default function PersonagensLista() {
   const [dataMarvel, setDataMarvel] = useState<ResponseData[]>([]);
 
   // useEffect(() => {
-  //   api.get(`/characters`)
+  //   api_marvel.get(`characters`)
   //     .then(
   //       (response) => {
   //         setDataMarvel(response.data.data.results);
-  //         console.log(dataMarvel);
+  //         // console.log(dataMarvel);
+  //         console.log(response.data.data.results);
+  //         console.log(response.data.data.results.thumbnail.path);
   //       }
   //     )
   //     .catch((error) => console.log(error));
@@ -37,7 +39,6 @@ export default function PersonagensLista() {
             <tr>
               <th>Imagem</th>
               <th>Nome</th>
-              <th>Descricao</th>
               <th></th>
             </tr>
           </thead>

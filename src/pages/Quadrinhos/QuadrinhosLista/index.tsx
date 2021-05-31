@@ -22,7 +22,6 @@ export default function QuadrinhosLista() {
             <tr>
               <th>Imagem</th>
               <th>Titulo</th>
-              <th>Descricao</th>
               <th></th>
             </tr>
           </thead>

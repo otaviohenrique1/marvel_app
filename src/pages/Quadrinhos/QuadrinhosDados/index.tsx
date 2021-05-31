@@ -46,8 +46,11 @@ export default function QuadrinhosDados() {
       return '';
     });
     console.log(resultado);
-    
   }, [id]);
+
+  async function handleSubmit() {
+    setFavoritar(!favoritar);
+  }
 
   return (
     <Row>
@@ -67,7 +70,7 @@ export default function QuadrinhosDados() {
                 color="primary"
                 placeholder="Favoritar"
                 type="button"
-                onClick={() => setFavoritar(!favoritar)}
+                onClick={handleSubmit}
               >
                 {(favoritar) ? (
                   <BsHeartFill size={40}/>
