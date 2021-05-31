@@ -63,8 +63,8 @@ export default function PersonagemDados() {
 	    "favorite": favoritar,
 	    "category": "Comics"
     })
-    .then(() => console.log(`Marcado => ${favoritar}`))
-    .catch(() => console.log(`Erro => ${favoritar}`));
+    .then((value) => console.log(`${favoritar} - Marcado => ${value}`))
+    .catch((erro) => console.log(`${favoritar} - Erro => - ${erro}`));
   }
 
   return (

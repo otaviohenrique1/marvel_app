@@ -7,7 +7,7 @@ import { BsChatSquareDots } from "react-icons/bs";
 import apiServer from "../../services/api_server";
 import { Formik, Form} from "formik";
 import * as Yup from "yup";
-import md5 from "md5";
+// import md5 from "md5";
 
 interface FormTypes {
   email: string;
@@ -36,25 +36,29 @@ export default function Login() {
   const history = useHistory();
 
   async function handleSubmitForm(values: FormTypes) {
-    apiServer.post('usuarios/login', {
+    return apiServer.post('usuarios/login', {
+      email: values.email,
+      senha: values.senha,
+    }, {
       auth: {
-        username: (values.email).toString(),
-        password: (md5(values.senha)).toString()
+        username: values.email,
+        password: values.senha,
+        // password: (md5(values.senha)).toString()
       }
     })
-    .then((e) => {
-      console.log(e);
-      console.log(values.email);
-      console.log(values.senha);
-      console.log(md5(values.senha));
+    .then((data) => {
+      // console.log(data);
+      // console.log(values.email);
+      // console.log(values.senha);
+      // console.log(md5(values.senha));
       history.push('/home');
     })
     .catch((error) => {
       alert('Usuario ou senha invalidos');
-      console.log(error);
-      console.log(values.email);
-      console.log(values.senha);
-      console.log(md5(values.senha));
+      // console.log(error);
+      // console.log(values.email);
+      // console.log(values.senha);
+      // console.log(md5(values.senha));
       // return;
     });
   }
@@ -69,7 +73,8 @@ export default function Login() {
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onSubmit={(values) => handleSubmitForm(values)}
+            onSubmit={handleSubmitForm}
+            // onSubmit={(values) => handleSubmitForm(values)}
           >
             {({errors, touched}) => (
               <Form>
