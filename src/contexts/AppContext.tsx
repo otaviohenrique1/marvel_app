@@ -6,9 +6,15 @@ type Usuario = {
   email: string;
 }
 
+const dadosIniciaisUsuario = {
+  id: '',
+  nome: '',
+  email: ''
+};
+
 type AppContextData =  {
-  usuarioData: Usuario[];
-  addUsuarioData: (value: []) => void;
+  usuarioData: Usuario;
+  setUsuarioData: React.Dispatch<React.SetStateAction<Usuario>>;
 }
 
 export const AppContext = createContext({} as AppContextData);
@@ -18,17 +24,13 @@ type AppContextProviderProps = {
 }
 
 export function AppContextProvider({ children }: AppContextProviderProps) {
-  const [usuarioData, setUsuarioData] = useState([]);
+  const [usuarioData, setUsuarioData] = useState<Usuario>(dadosIniciaisUsuario);
 
-  function addUsuarioData(value: []) {
-    setUsuarioData(value);
-  }
-  
   return (
     <AppContext.Provider
       value={{
         usuarioData,
-        addUsuarioData
+        setUsuarioData
       }}
     >
       {children}

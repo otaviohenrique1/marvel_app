@@ -7,6 +7,7 @@ import { BsChatSquareDots } from "react-icons/bs";
 import apiServer from "../../services/api_server";
 import { Formik, Form} from "formik";
 import * as Yup from "yup";
+import { useAppContext } from "../../contexts/AppContext";
 // import md5 from "md5";
 
 interface FormTypes {
@@ -15,6 +16,8 @@ interface FormTypes {
 }
 
 export default function Login() {
+  const { setUsuarioData } = useAppContext();
+
   const initialValues = {
     email: '',
     senha: '',
@@ -47,10 +50,15 @@ export default function Login() {
       }
     })
     .then((data) => {
-      // console.log(data);
+      // console.log(data.data.dataUser);
       // console.log(values.email);
       // console.log(values.senha);
       // console.log(md5(values.senha));
+      setUsuarioData({
+        id: data.data.dataUser.id,
+        nome: data.data.dataUser.nome,
+        email: data.data.dataUser.email,
+      });
       history.push('/home');
     })
     .catch((error) => {

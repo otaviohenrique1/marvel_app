@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { Navbar, Collapse, Nav, NavbarBrand, NavbarToggler, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavItem } from "reactstrap";
 import { BsChatSquareDots, BsPersonFill } from "react-icons/bs";
 import '../../styles/scss/header/style.scss'
-import apiTeste4 from '../../services/api_teste/api_teste_4';
+// import apiTeste4 from '../../services/api_teste/api_teste_4';
+import { useAppContext } from "../../contexts/AppContext";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const { usuarioData } = useAppContext();
   
   return (
     <>
@@ -35,10 +37,18 @@ export default function Header() {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  <Link className="nav-item-link" to={`/usuario/${apiTeste4[0].id}`}>Perfil</Link>
+                  {/* {apiTeste4[0].name} */}
+                  <span>
+                    {usuarioData.nome}
+                  </span>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link className="nav-item-link" to={`/favoritos/${apiTeste4[0].id}`}>Favoritos</Link>
+                  {/* <Link className="nav-item-link" to={`/usuario/${apiTeste4[0].id}`}>Perfil</Link> */}
+                  <Link className="nav-item-link" to={`/usuario/${usuarioData.id}`}>Perfil</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  {/* <Link className="nav-item-link" to={`/favoritos/${apiTeste4[0].id}`}>Favoritos</Link> */}
+                  <Link className="nav-item-link" to={`/favoritos/${usuarioData.id}`}>Favoritos</Link>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>

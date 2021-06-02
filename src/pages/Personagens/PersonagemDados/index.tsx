@@ -31,6 +31,7 @@ const dadosIniciais = {
 export default function PersonagemDados() {
   const [dataMarvel, setDataMarvel] = useState<DataMarvelProps>(dadosIniciais);
   const [favoritar, setFavoritar] = useState<boolean>(false);
+  // const [favoritoExiste, setFavoritoExiste] = useState<boolean>(false);
   // const [userData, setUserData] = useState<ResponseData[]>([]);
   
   const { id } = useParams<PersonagemDadosParamsProps>();
