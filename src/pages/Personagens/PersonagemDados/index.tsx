@@ -4,6 +4,7 @@ import { Button, Col, Form, ListGroup, ListGroupItem, Row } from 'reactstrap';
 import apiTeste from '../../../services/api_teste/api_teste';
 import apiTeste4 from '../../../services/api_teste/api_teste_4';
 import apiServer from '../../../services/api_server';
+import api_marvel_teste from '../../../services/api_marvel_teste';
 import { BsHeartFill, BsHeart } from "react-icons/bs";
 // import ResponseData from '../../Usuarios/UsuarioDados/ResponseData';
 
@@ -55,6 +56,20 @@ export default function PersonagemDados() {
   
   // useEffect(() => {}, []);
 
+  useEffect(() => {
+    api_marvel_teste.get(`personagem/${id}`)
+    .then((item) => {
+      setDataMarvel({
+        name: item.data.name,
+        description: item.data.description,
+        thumbmail: {
+          path: item.data.path,
+          extension: item.data.extension,
+        }
+      })
+    });
+  }, [id]);
+
   async function handleSubmit() {
     setFavoritar(!favoritar);
     apiServer.post('favoritos', {
@@ -77,7 +92,7 @@ export default function PersonagemDados() {
         <ListGroup>
           <ListGroupItem>{dataMarvel.name}</ListGroupItem>
           <ListGroupItem>
-            <img src={dataMarvel.thumbmail.path} alt={dataMarvel.name} width={200}  />
+            <img src={`${dataMarvel.thumbmail.path}.${dataMarvel.thumbmail.extension}`} alt={dataMarvel.name} width={200}  />
           </ListGroupItem>
           <ListGroupItem>{dataMarvel.description}</ListGroupItem>
           <ListGroupItem>

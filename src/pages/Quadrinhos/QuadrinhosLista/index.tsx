@@ -30,6 +30,7 @@ export default function QuadrinhosLista() {
                 dataMarvel.map((comics: ResponseData) => {
                   return (
                     <Item
+                      key={comics.id}
                       id={comics.id}
                       name={comics.title}
                       image={`${comics.thumbmail.path}`}

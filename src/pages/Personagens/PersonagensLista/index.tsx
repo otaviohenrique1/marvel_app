@@ -7,6 +7,7 @@ import ResponseData from './ResponseData';
 import { Item } from '../../../components/Item';
 
 import apiTeste from "../../../services/api_teste/api_teste";
+// import api from '../../../services/api_marvel_teste';
 
 export default function PersonagensLista() {
   const [dataMarvel, setDataMarvel] = useState<ResponseData[]>([]);
@@ -23,6 +24,13 @@ export default function PersonagensLista() {
   //     )
   //     .catch((error) => console.log(error));
   // }, [dataMarvel]);
+
+  // useEffect(() => {
+  //   api.get('personagens')
+  //   .then((item) => {
+  //     setDataMarvel(item.data);
+  //   });
+  // }, []);
 
   useEffect(() => {
     setDataMarvel(apiTeste);
@@ -43,13 +51,14 @@ export default function PersonagensLista() {
             </tr>
           </thead>
           <tbody>
-            {(dataMarvel.length !== 0) ? 
+            {(dataMarvel) ? 
               dataMarvel.map((character: ResponseData) => {
                 return (
                   <Item
+                    key={character.id}
                     id={character.id}
                     name={character.name}
-                    image={`${character.thumbmail.path}`}
+                    image={`${character.thumbmail.path}.${character.thumbmail.extension}`}
                     to={`/personagens/${character.id}`}
                   />
                 );
