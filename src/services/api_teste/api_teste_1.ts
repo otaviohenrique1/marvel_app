@@ -1,3 +1,4 @@
+/*
 import avengers from "../../services/api_teste/images/personagens/avengers.jpg";
 import blackWidow from "../../services/api_teste/images/personagens/black_widow.jpg";
 import captainAmerica from "../../services/api_teste/images/personagens/captain_america.jpg";
@@ -6,6 +7,16 @@ import ironMan from "../../services/api_teste/images/personagens/iron_man.jpg";
 import spiderMan from "../../services/api_teste/images/personagens/spider-man.jpg";
 import wolverine from "../../services/api_teste/images/personagens/wolverine.jpg";
 import xMen from "../../services/api_teste/images/personagens/x-men.jpg";
+*/
+
+const avengers = "../../services/api_teste/images/personagens/avengers";
+const blackWidow = "../../services/api_teste/images/personagens/black_widow";
+const captainAmerica = "../../services/api_teste/images/personagens/captain_america";
+const guardiansOfTheGalaxy = "../../services/api_teste/images/personagens/guardians_of_the_galaxy";
+const ironMan = "../../services/api_teste/images/personagens/iron_man";
+const spiderMan = "../../services/api_teste/images/personagens/spider-man";
+const wolverine = "../../services/api_teste/images/personagens/wolverine";
+const xMen = "../../services/api_teste/images/personagens/x-men";
 
 const apiTeste = [
   {

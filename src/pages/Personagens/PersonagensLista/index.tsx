@@ -6,7 +6,7 @@ import "../../../styles/scss/personagem/style.scss";
 import ResponseData from './ResponseData';
 import { Item } from '../../../components/Item';
 
-import apiTeste from "../../../services/api_teste/api_teste";
+import apiTeste from "../../../services/api_teste/api_teste_1";
 // import api from '../../../services/api_marvel_teste';
 
 export default function PersonagensLista() {
